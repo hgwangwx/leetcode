@@ -1,7 +1,7 @@
 void *memcpy(void *dst, const void *src, size_t size)
 {
-    char *psrc;
-    char *pdst;
+    char *psrc = nullptr;
+    char *pdst = nullptr;
 
     if (nullptr == dst || nullptr == src)
     {

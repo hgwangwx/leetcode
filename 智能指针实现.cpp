@@ -23,7 +23,7 @@ public:
     SmartPtr<T> operator=(const SmartPtr<T>& other)
     {
         // 自我赋值
-        if (this != &sp) {
+        if (this != &other) {
             // 当前指针引用计数减一
             if (--(*ref_count) == 0) {
                 delete ptr;

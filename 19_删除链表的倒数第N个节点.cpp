@@ -31,7 +31,7 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
 
     // 删除要删除的节点
     delete tmp;
-    
+
     // 返回头结点
     return dummy->next;
 }

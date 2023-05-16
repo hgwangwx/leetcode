@@ -35,7 +35,7 @@ string longestCommonPrefix(vector<string>& strs)
     // 记录最长公共前缀
     string prefix = strs[0];
     // 从第二个字符串开始遍历，依次更新最长公共前缀
-    for(int i = 1; i < strs.szie(); i++)
+    for(int i = 1; i < strs.size(); i++)
     {
         // 如果当前字符串不以最长公共前缀开头，不断缩短最长公共前缀，直到符合条件
         while(strs[i].find(prefix)!=0)
