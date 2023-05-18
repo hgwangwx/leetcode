@@ -22,15 +22,15 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         int sum = n1+n2+carry;
         if(head)
         {
-            head = tail = new ListNode(sum/10);
+            head = tail = new ListNode(sum%10);
         }
         else
         {
-            tail->next = new ListNode(sum/10);
+            tail->next = new ListNode(sum%10);
             tail = tail->next;
         }
 
-        carry = sum%10;
+        carry = sum/10;
         if(l1)
         {
             l1 = l1->next;
