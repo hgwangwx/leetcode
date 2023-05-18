@@ -15,7 +15,7 @@ int strToInt(string &str)
     //去除空格
     int index = 0;
     int n = str.size();
-    while(index < n && str[index] == " ")
+    while(index < n && str[index] == ' ')
     {
         ++index;
     }
@@ -23,7 +23,7 @@ int strToInt(string &str)
 
     int sign = 1;
     //处理符号
-    while(index < n && str[index] == "+" || str[index] == "-")
+    while(index < n && str[index] == '+' || str[index] == '-')
     {
         sign = str[index]?1:-1;
         ++index;
