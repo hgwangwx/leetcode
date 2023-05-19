@@ -25,7 +25,7 @@ int strToInt(string &str)
     //处理符号
     while(index < n && str[index] == '+' || str[index] == '-')
     {
-        sign = str[index]?1:-1;
+        sign = (str[index] == '+')?1:-1;
         ++index;
     }
 
