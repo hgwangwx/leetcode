@@ -17,7 +17,7 @@ ll lcm(ll a, ll b) {
 // 计算最小操作次次数
 int minOperations(vector<int>& numbers)
 {
-    size_t n = number.size();
+    size_t n = numbers.size();
     ll ans = 0;  // 最小操作次数
     ll lcm = 1;  // 数组元素的最小公倍数
 

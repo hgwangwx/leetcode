@@ -10,7 +10,7 @@ int binarySearch(vector<int>& nums, int target) {
     while(left < right)
     {
         // 求中间位置，避免溢出
-        int mid = left + (right - left/)2;
+        int mid = left + (right - left)/2;
 
         if(target == nums[mid])
         {

@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #include <iostream>
 
 using namespace std;
@@ -6,7 +7,7 @@ using namespace std;
 string longestCommonPrefix(vector<string>& strs)
 {
     // 如果输入为空，返回空字符串
-    if(!str.size())
+    if(!strs.size())
         return "";
 
     // 记录最长公共前缀

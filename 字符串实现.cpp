@@ -42,10 +42,10 @@ public:
     String& operator=(const String& other) {
         if(this != &other)
         {
-            delete[] data;
+            delete[] m_data;
             m_data = new char[other.m_size+1];
             m_size = other.m_size;
-            strcpy(m_data, other.m_size);
+            strcpy(m_data, other.m_data);
         }
 
         return *this;
