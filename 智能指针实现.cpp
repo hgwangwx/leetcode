@@ -37,6 +37,12 @@ public:
             (*ref_count)++;
     }
 
+     // 移动构造函数
+    SmartPtr(SmartPtr&& other) noexcept : ptr_(other.ptr_), refCount_(other.refCount_) {
+        other.ptr_ = nullptr;
+        other.refCount_ = nullptr;
+    }
+
     // 解引用运算符
     T& operator*() const {
         assert(this->_ptr == nullptr);
