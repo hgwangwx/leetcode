@@ -6,7 +6,7 @@
 using namespace std;
 
 int threeSumClosest(vector<int>& nums, int target) {
-    if(nums < 3)
+    if(nums.size() < 3)
         return 0;
     
     // 将nums排序
@@ -14,6 +14,7 @@ int threeSumClosest(vector<int>& nums, int target) {
 
      // closestSum初始化为最大值
     int closestSum = INT_MAX;
+    int minDiff = INT_MAX; 
     int n = nums.size();
 
     for(int i = 0; i < n; i++)
@@ -25,7 +26,7 @@ int threeSumClosest(vector<int>& nums, int target) {
         while(left < right)
         {
             // 计算三数之和
-            int sum = nums[i] + nums[left] + nums[right];
+            int64_t sum = nums[i] + nums[left] + nums[right];
            
             if(sum == target)      // 如果三数之和等于target，则直接返回
             {
@@ -40,7 +41,7 @@ int threeSumClosest(vector<int>& nums, int target) {
                 right--;
             }
 
-            if(abs(sum -target) < abd(closestSum - target) )  // 更新closestSum
+            if(abs(sum -target) < abs(closestSum - target) )  // 更新closestSum
             {
                 closestSum = sum;
             }

@@ -20,7 +20,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         int n2 = l2 ? l2->val:0;
 
         int sum = n1+n2+carry;
-        if(head)
+        if(!head)
         {
             head = tail = new ListNode(sum%10);
         }

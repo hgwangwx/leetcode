@@ -22,11 +22,18 @@ int strToInt(string &str)
 
 
     int sign = 1;
+    int signNum = 0;
     //处理符号
     while(index < n && str[index] == '+' || str[index] == '-')
     {
         sign = (str[index] == '+')?1:-1;
+        signNum++;
         ++index;
+    }
+
+    if(signNum >1)
+    {
+        return 0;
     }
 
     int res = 0;
@@ -40,4 +47,6 @@ int strToInt(string &str)
         res = res*10  + digit;
         ++index;
     }
+
+    return res * sign;
 }

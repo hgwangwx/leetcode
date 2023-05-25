@@ -35,6 +35,12 @@ public:
         (*ref_count)++;
     }
 
+    // 拷贝构造函数
+    SmartPtr(const SmartPtr<T>& other)
+        : ptr(other.ptr), ref_count(other.ref_count) {
+        (*ref_count)++;
+    }
+
      // 移动构造函数
     SmartPtr(SmartPtr&& other) noexcept : ptr_(other.ptr_), refCount_(other.refCount_) {
         other.ptr_ = nullptr;
@@ -53,8 +59,12 @@ public:
         return this->ptr;
     }
 
+    size_t count() const {
+        return *ref_count;
+    }
+
 private:
     T* ptr;
-    int* ref_count;
+    size_t* ref_count;
 
 };

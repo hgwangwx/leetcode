@@ -19,7 +19,7 @@ int lengOfLongestSubstring(std::string s)
         if(i !=0 )
         {
             //移除滑动窗口
-            occ.earse(s[i-1]);
+            occ.erase(s[i-1]);
         }
 
         while(rk+1 < n && !occ.count(s[rk+1])) {

@@ -1,7 +1,11 @@
 bool isPalindrome(int x)
 {
+    if(0 == x )
+    {
+        return true;
+    }
     // 小于等于零为非回文数 或者 最后一位为0
-    if( x <= 0 || x%10 == 0)
+    else if( x <0 || x%10 == 0)
     {
         return false;
     }
