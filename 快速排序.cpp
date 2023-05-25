@@ -4,7 +4,7 @@
 using namespace std;
 
 // 快速排序函数
-void quickSort(vector<int>& nums. int left, int right) {
+void quickSort(vector<int>& nums, int left, int right) {
     // 如果待排序数组为空或只有一个元素，不需要进行排序
     if(left >= right ) return;
 
@@ -24,7 +24,7 @@ void quickSort(vector<int>& nums. int left, int right) {
         } 
 
         // 找到第一个小于等于基准元素的数
-        while(i <= j && nums[j] > num[pivot]) {
+        while(i <= j && nums[j] > nums[pivot]) {
             j--;
         }
 
@@ -33,7 +33,7 @@ void quickSort(vector<int>& nums. int left, int right) {
         {
             swap(nums[i], nums[j]);
             i++;
-            j--
+            j--;
         }
     }
         

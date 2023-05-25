@@ -28,11 +28,13 @@ public:
             if (--(*ref_count) == 0) {
                 delete ptr;
                 delete ref_count;
+                ptr = nullptr;
+                ref_count = nullptr;
             }
 
-        ptr = other.ptr;
-        ref_count = other.ref_count;
-        (*ref_count)++;
+            ptr = other.ptr;
+            ref_count = other.ref_count;
+            (*ref_count)++;
     }
 
     // 拷贝构造函数

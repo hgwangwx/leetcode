@@ -2,7 +2,7 @@
 
 using namespace std;
 
-pair<int , int > expandAroundCenter(const string &s, const int left, const int right)
+pair<int , int > expandAroundCenter(const string &s,  int left,  int right)
 {
     //进行中心扩张
     while(left >= 0 && right <= s.size() && s[left] == s[right])
