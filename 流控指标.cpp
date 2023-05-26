@@ -6,8 +6,6 @@
 
 class FlowController {
 public:
-    FlowController(int maxOrderPerSecond) : maxOrderPerSecond(maxOrderPerSecond), counter(0) {}
-
     // 检查是否允许下单
     bool CheckOrderAllowed() {
         std::lock_guard<std::mutex> lock(mutex);

@@ -39,7 +39,7 @@ int strToInt(string &str)
     int res = 0;
     //数字转换
     while(index < n && isdigit(str[index])){
-        int  digit = str[index] - '0';
+        int digit = str[index] - '0';
         //判断是否溢出
         if(res > (INT_MAX - digit) /10){
             return sign == 1?INT_MAX:INT_MIN;

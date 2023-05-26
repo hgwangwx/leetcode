@@ -20,7 +20,7 @@ public:
         }
     }
 
-    SmartPtr<T> operator=(const SmartPtr<T>& other)
+    SmartPtr<T>& operator=(const SmartPtr<T>& other)
     {
         // 自我赋值
         if (this != &other) {

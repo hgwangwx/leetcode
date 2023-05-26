@@ -27,6 +27,18 @@ int lengOfLongestSubstring(std::string s)
             rk++;
         }
 
+        /*
+        for(int j = 1; i < n; j++)
+        {
+            if(!occ.count(s[j]))
+            {
+                occ.insert(s[j]);
+            }
+        }
+
+        ans = max(ans, occ.size());
+        */
+
         
         ans = max(ans, rk-i+1);
     }
